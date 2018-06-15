@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TODOListApp/v15/Server/sqlite3/storage.ide-wal
+/.vs/TODOListApp/v15/Server/sqlite3/storage.ide-shm
+/.vs/TODOListApp/v15/Server/sqlite3/storage.ide
+/.vs/TODOListApp/v15/Server/sqlite3/db.lock
+/.vs/TODOListApp/v15/.suo
+/packages
+/Projekt/bin
+/Projekt/obj/Debug

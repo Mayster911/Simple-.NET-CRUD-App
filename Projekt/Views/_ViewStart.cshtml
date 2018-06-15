@@ -1,0 +1,21 @@
+﻿@{
+    if (Session["LoggedUser"] != null)
+    {
+        Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+    }
+    else
+    {
+        HttpCookie authCookie = Request.Cookies[FormsAuthentication.FormsCookieName];
+        if (authCookie != null)
+        {
+            FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value);
+            Session["LoggedUser"] = ticket.Name;
+            Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+        }
+
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+    }
+}
